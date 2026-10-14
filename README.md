@@ -1,5 +1,7 @@
 # Fault-Tolerant n8n & PostgreSQL Production Stack (Docker Compose)
 
+![Production n8n Stack with PgBouncer, Redis, and Multi-Worker](docs/stack-preview.png)
+
 Reference production architecture designed to eliminate the 3 most common failure modes in self-hosted automation and webhook infrastructures:
 
 1. **Node.js Out-Of-Memory (OOM) Crashes on Webhook Spikes:** Solved by decoupling the main webhook receiver (`n8n-main`) from execution processing using **Redis Queue Mode** (`EXECUTIONS_MODE=queue`) and dedicated horizontal worker replicas (`n8n-worker`) with explicit V8 heap ceilings (`--max-old-space-size=1536`).
