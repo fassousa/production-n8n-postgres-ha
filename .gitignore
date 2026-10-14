@@ -6,3 +6,4 @@
 # Logs and temp files
 *.log
 .DS_Store
+setup-and-run.sh
