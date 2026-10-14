@@ -1,4 +1,3 @@
-version: '3.8'
 
 x-n8n-common: &n8n-common
   image: docker.n8n.io/n8nio/n8n:latest
